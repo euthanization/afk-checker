@@ -33,11 +33,11 @@ class counter(discord.Client):
 
     async def on_message(self, x):
         regex = re.findall(r'<@!?([0-9]+)>', x.content)
-        if regex and 'afk' in x.content.lower() and x.author == self.user:
+        if regex and 'start' in x.content.lower() and x.author == self.user:
             for i in range(2, 100001):
+                time.sleep(3600)
                 await x.channel.send(i)
-                if i > 29
-                  time.sleep(1.7)
+
 
 
 client = counter()
